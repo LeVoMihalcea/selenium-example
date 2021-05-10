@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="org.example.features.search.EmagSearch" skipped="0" tests="1" time="182.4" timestamp="2021-05-11 12:08:57"><testcase classname="org.example.features.search.EmagSearch" name="Searching by keyword pear should display the corresponding article"><failure message="&#10;Expected: a collection containing a string containing &quot;Set Placa de baza Raspberry Pi 4 Model B/8GB&quot;&#10;     but: " type="java.lang.AssertionError">
+Expected: a collection containing a string containing "Set Placa de baza Raspberry Pi 4 Model B/8GB"
+     but: </failure><system-err>
+Expected: a collection containing a string containing "Set Placa de baza Raspberry Pi 4 Model B/8GB"
+     but: &#13;
+org.example.steps.serenity.EmagEndUserSteps.should_see_definition(EmagEndUserSteps.java:25)&#13;
+org.example.features.search.EmagSearch.searching_by_keyword_pear_should_display_the_corresponding_article(EmagSearch.java:25)&#13;
+</system-err></testcase></testsuite>

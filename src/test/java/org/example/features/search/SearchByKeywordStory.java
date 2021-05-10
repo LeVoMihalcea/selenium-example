@@ -6,6 +6,7 @@ import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Pending;
 import net.thucydides.core.annotations.Steps;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
@@ -55,7 +56,7 @@ public class SearchByKeywordStory {
         anna.should_see_definition(ORANGE_DEFINITION);
     }
 
-    @Pending @Test
-    public void searching_by_ambiguious_keyword_should_display_the_disambiguation_page() {
-    }
+//    @Pending @Test @Ignore
+//    public void searching_by_ambiguious_keyword_should_display_the_disambiguation_page() {
+//    }
 } 
