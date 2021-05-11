@@ -12,6 +12,8 @@ import org.openqa.selenium.WebDriver;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -63,7 +65,7 @@ public class UBBSearch {
 
     private List<List<String>> getCSV(String filename){
         List<List<String>> records = new ArrayList<List<String>>();
-        try (CSVReader csvReader = new CSVReader(new FileReader(filename));) {
+        try (CSVReader csvReader = new CSVReader(new FileReader(filename, StandardCharsets.UTF_8));) {
             String[] values = null;
             while ((values = csvReader.readNext()) != null) {
                 records.add(Arrays.asList(values));
