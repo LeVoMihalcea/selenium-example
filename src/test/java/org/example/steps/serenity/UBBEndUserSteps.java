@@ -2,6 +2,7 @@ package org.example.steps.serenity;
 
 import net.thucydides.core.annotations.Step;
 import org.example.pages.UBBPage;
+import org.hamcrest.Matchers;
 import org.openqa.selenium.By;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -43,5 +44,10 @@ public class UBBEndUserSteps {
     public void check_undergraduate_programme(String xpath, String undergraduate_programme) {
         String text = ubbPage.find(By.xpath(xpath)).getText();
         assertThat(undergraduate_programme, containsString(text));
+    }
+
+    public void check_search_bar_is_not_in_romanian() {
+        String search_bar_text = ubbPage.find(By.xpath("//*[@id=\"s\"]")).getValue();
+        assertThat("Căutare", Matchers.not(search_bar_text));
     }
 }

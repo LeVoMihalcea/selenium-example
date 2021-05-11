@@ -52,7 +52,13 @@ public class UBBSearch {
         List<List<String>> csv = getCSV("undergraduate_programmes.csv");
         for(List<String> entry: csv)
             ubbUser.check_undergraduate_programme(entry.get(0), entry.get(1));
+    }
 
+    @Test
+    public void change_language_to_english_should_not_display_in_romanian() {
+        ubbUser.open_home_page();
+        ubbUser.change_language_to_english();
+        ubbUser.check_search_bar_is_not_in_romanian();
     }
 
     private List<List<String>> getCSV(String filename){
